@@ -1,0 +1,83 @@
+/* form.pcss */
+
+.form {
+  &__element {
+    &--success {
+      .form__field {
+        .icon {
+          &--link::before {
+            content: svg-load($linkIcon, fill: $confirmColor);
+          }
+          &--user::before {
+            content: svg-load($userIcon, fill: $confirmColor);
+          }
+          &--lock::before {
+            content: svg-load($lockIcon, fill: $confirmColor);
+          }
+          &--pin::before {
+            content: svg-load($pinIcon, fill: $confirmColor);
+          }
+          &--mail::before {
+            content: svg-load($mailIcon, fill: $confirmColor);
+          }
+        }
+      }
+      hr {
+        border-color: $confirmColor !important;
+      }
+    }
+    &--error {
+      .form__field {
+        .icon {
+          &--link::before {
+            content: svg-load($linkIcon, fill: $cancelColor);
+          }
+          &--user::before {
+            content: svg-load($userIcon, fill: $cancelColor);
+          }
+          &--lock::before {
+            content: svg-load($lockIcon, fill: $cancelColor);
+          }
+          &--pin::before {
+            content: svg-load($pinIcon, fill: $cancelColor);
+          }
+          &--mail::before {
+            content: svg-load($mailIcon, fill: $cancelColor);
+          }
+        }
+      }
+      hr {
+        border-color: $cancelColor !important;
+      }
+    }
+    hr {
+      margin: 0;
+      border-color: $thirdColor;
+      border-style: solid;
+    }
+  }
+  &__field {
+    display: flex;
+    width: 420px;
+    .icon {
+      width: 27px;
+      height: auto;
+      margin-top: 35px;
+      &--link::before {
+        content: svg-load($linkIcon, fill: $thirdColor);
+      }
+      &--user::before {
+        content: svg-load($userIcon, fill: $thirdColor);
+      }
+      &--lock::before {
+        content: svg-load($lockIcon, fill: $thirdColor);
+      }
+      &--pin::before {
+        content: svg-load($pinIcon, fill: $thirdColor);
+      }
+      &--mail::before {
+        content: svg-load($mailIcon, fill: $thirdColor);
+      }
+    }
+  }
+}

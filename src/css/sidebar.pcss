@@ -1,0 +1,56 @@
+/* sidebar.pcss */
+
+.sidebar {
+  background-color: $firstColor;
+  z-index: 1;
+  &--collapsed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    &::before {
+      content: '';
+      position: absolute;
+      border-right: 1px solid #000;
+      width: 70px;
+      height: 100%;
+      opacity: 0.35;
+      z-index: -1;
+    }
+  }
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__element {
+    width: 100%;
+  }
+  &__link {
+    height: 70px;
+    display: flex;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1;
+    }
+    &--active {
+      background-color: $secondColor;
+      border-top: 1px solid rgba(0, 0, 0, 0.35);
+      border-left: 3px solid #fff;
+      opacity: 1;
+    }
+    &.logo {
+      opacity: 1;
+      .icon {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}

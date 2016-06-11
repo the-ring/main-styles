@@ -1,0 +1,54 @@
+/* icons.pcss */
+
+/* http://entypo.com/ */
+
+.icon {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  margin: auto;
+  &--logo::before {
+    content: svg-load($logoIcon, fill: #fff);
+  }
+  &--home::before {
+    content: svg-load($homeIcon, fill: #fff);
+  }
+  &--report::before {
+    content: svg-load($reportIcon, fill: #fff);
+  }
+  &--chart::before {
+    content: svg-load($chartIcon, fill: #fff);
+  }
+  &--cycle::before {
+    content: svg-load($cycleIcon, fill: #fff);
+  }
+  &--settings::before {
+    content: svg-load($settingsIcon, fill: #fff);
+  }
+  &--chevron-down::before {
+    content: svg-load($chevronDownIcon, fill: #fff);
+  }
+  &--circle-plus::before {
+    content: svg-load($circlePlusIcon, fill: #fff);
+  }
+  &--pin::before {
+    content: svg-load($pinIcon, fill: #fff);
+  }
+  &--link::before {
+    content: svg-load($linkIcon, fill: #fff);
+  }
+  &--cross::before {
+    content: svg-load($crossIcon, fill: #fff);
+  }
+  &--user::before {
+    content: svg-load($userIcon, fill: #fff);
+  }
+  &--lock::before {
+    content: svg-load($lockIcon, fill: #fff);
+  }
+  &--mail::before {
+    content: svg-load($mailIcon, fill: #fff);
+  }
+}

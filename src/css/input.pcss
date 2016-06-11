@@ -1,0 +1,53 @@
+/* input.pcss */
+
+.input {
+  &--radio, &--checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  &--checkbox {
+    &:checked ~ .input__icon--circle {
+      border-width: 3px !important;
+    }
+  }
+  &--text {
+    flex: 1;
+    width: 275px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 100;
+    background-color: $firstColor;
+    border: none;
+    opacity: 0.75;
+    &:focus {
+      outline: 0;
+      opacity: 1;
+    }
+  }
+  &--filled {
+    opacity: 1;
+  }
+  &__label {
+    cursor: pointer;
+  }
+  &__icon {
+    display: block;
+    cursor: pointer;
+    &--circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 25px;
+      border: $disabledColor solid 8px;
+    }
+    &--google {
+      border-color: $googleColor !important;
+    }
+    &--yandex {
+      border-color: $yandexColor !important;
+    }
+  }
+}
